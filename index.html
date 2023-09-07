@@ -16,6 +16,70 @@
 
 <body>
     <div id="main">
+        <div class="userLogin none">
+            <div class="loginBox">
+                <div class="loginHead">
+                    <i class="fa-solid fa-cloud-bolt"></i>
+                    <h2>CloudsBolts</h2>
+                </div>
+                <div class="loginClose">
+                    <h2>Please Login In To Continue</h2>
+                    <i id="closeLogin" class="fa-solid fa-xmark"  style="cursor: pointer;"></i>
+                </div>
+                <div class="loginSign">
+                    <div id="btn">
+                        <button onclick="signIn()  ">Sign In</button>
+                        <button onclick="signUp() ">Sign Up</button>
+                    </div>
+                </div>
+                <div class="form">
+                    <form action="" id="signIn" class="text">
+                        <div class="formEntry">
+                            <label for="userName">Username</label>
+                            <input style="color: black;" type="text" name="userID" id="userID" placeholder="Username"
+                                required>
+                        </div>
+                        <div class="formEntry">
+                            <label for="passWord">Password</label>
+                            <input style="color: black;" type="password" name="userPass" id="userPass"
+                                placeholder="Password" required>
+                        </div>
+                        <input type="checkbox" name="remember" id="remember">Remember Me
+                        <div class="forgetSec">
+                            <button type="submit">Sign In</button>
+                            <h3>OR</h3>
+                            <div class="socialSign">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-google"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="" id="signUp" class="text">
+                        <div class="formEntry">
+                            <label for="userName">Username</label>
+                            <input style="color: black;" type="text" name="userID" id="userID" placeholder="Username"
+                                required>
+                        </div>
+                        <div class="formEntry">
+                            <label for="Email">Email</label>
+                            <input style="color: black;" type="email" name="userPass" id="userEmail"
+                                placeholder="Password" required>
+                        </div>
+                        <div class="formEntry">
+                            <label for="passWord">password</label>
+                            <input style="color: black;" type="password" name="userPass" id="userEmail"
+                                placeholder="Password" required>
+                        </div>
+                        <div class="forgetSec">
+                            <button type="submit">Sign Up</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
         <div class="navbar">
             <div class="sec1">
                 <div class="logo">
@@ -89,7 +153,7 @@
                         </i>
                         <p>Settings</p>
                     </a>
-                    
+
                 </nav>
             </div>
         </div>
@@ -609,7 +673,7 @@
                 <h2 class="bottom-footer">Copyright &copy; 2023 CloudsBolt. All right reserve</h2>
             </div>
         </div>
-        <div class="popOut none">
+        <div class="popOut ">
             <div class="popOutImg">
                 <i class="fa-solid fa-city"></i>
                 <h1>Invalid Cities Name</h1>

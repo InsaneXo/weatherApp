@@ -7,6 +7,38 @@ let allNav = document.querySelectorAll('.nav-bar2 a');
 let allSec = document.querySelector('.all-sec')
 
 
+let x = document.getElementById("signUp");
+let y = document.getElementById("signIn");
+let z = document.getElementById("btn");
+
+function signUp() {
+    x.style.right = "274px";
+    y.style.right = "258px";
+    
+}
+
+function signIn() {
+    x.style.right = "-2px";
+    y.style.right = "-3px";
+}
+
+const login = () => {
+    let userLogin = document.querySelector('.userLogin')
+    let closeLogin = document.querySelector('#closeLogin')
+    
+    setTimeout(() => {
+        userLogin.classList.toggle('none')
+    }, 7000)
+    
+    closeLogin.addEventListener('click',()=>{
+        userLogin.classList.toggle('none')
+    })
+
+}
+
+
+
+login();
 
 
 allNav.forEach((Navs) => {
@@ -597,9 +629,9 @@ const filldata = (cardclone, article) => {
 
 
 
-newsAPI('Noida');
-weather('Noida');
-weatherForcast('Noida');
+// newsAPI('Noida');
+// weather('Noida');
+// weatherForcast('Noida');
 
 SearchBtn.addEventListener('click', () => {
     newsAPI(Search_box.value);

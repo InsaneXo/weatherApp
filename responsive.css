@@ -341,6 +341,23 @@
         left: 0;
     }
 
+    .popOutImg i {
+        color: black;
+        font-size: 44px;
+    }
+
+    .popOutImg h1 {
+        color: black;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    .popOutImg h3 {
+        color: black;
+        font-weight: 400;
+        font-size: 13px;
+      }
+
     .forescast-sec1 {
         flex-direction: column;
         justify-content: center;

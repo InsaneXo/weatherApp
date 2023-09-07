@@ -8,7 +8,7 @@
     color: #e2f3f5;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -27,14 +27,167 @@ html {
     width: 100%;
 }
 
+
+
+.userLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: #00000087;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    top: 0px;
+    transition: all 0.3s ease;
+}
+
+.loginBox {
+    height: 73vh;
+    width: 52vw;
+    background-color: #3d5af1;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.loginHead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 70px;
+    background-color: #0e153a;
+}
+
+.loginHead i {
+    font-size: 33px;
+}
+
+.loginHead h2 {
+    font-weight: 400;
+}
+
+.loginClose {
+    width: 100%;
+    height: 39px;
+    background-color: #e2f3f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.loginClose h2 {
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+}
+
+.loginClose i {
+    position: absolute;
+    right: 9px;
+    color: black;
+}
+
+.form {
+    width: 272px;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+    gap: 24px;
+
+}
+
+.formEntry {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.formEntry input {
+    color: black;
+    height: 51px;
+    padding: 3px;
+    border: none;
+    border-radius: 6px;
+}
+
+.text {
+    transition:  0.3s ease;
+}
+
+#btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin: 12px 0;
+}
+
+#btn button{
+    background-color: #42275a;
+    border: 2px solid white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#signIn {
+    position: relative;
+}
+
+#signUp {
+    position: relative;
+}
+
+.forgetSec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 23px;
+}
+
+.forgetSec button {
+    background-color: #42275a;
+    border: 3px solid white;
+    padding: 8px 31px;
+    border-radius: 10px;
+
+}
+
+.socialSign {
+    display: flex;
+    gap: 3px;
+}
+
+.socialSign i {
+    height: 40px;
+    width: 40px;
+    background-color: #42275a;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+
+
 .navbar {
     position: fixed;
-    z-index: 999;
+    
     width: 100%;
     top: -1px;
     padding: 20px 27px;
     background: #0e153a;
     border-bottom: 2px solid black;
+    z-index: 1;
 }
 
 .down-navigation {
@@ -1014,7 +1167,7 @@ a {
 
 
 .popOutImg i {
-    color: gold;
+    color: black;
     font-size: 82px;
 }
 
@@ -1029,7 +1182,7 @@ a {
     font-weight: 400;
 }
 
-.popUpCloseBtn{
+.popUpCloseBtn {
     position: absolute;
     top: 6px;
     right: 6px;
@@ -1040,6 +1193,6 @@ a {
     font-size: 26px;
 }
 
-.none{
+.none {
     display: none;
 }
