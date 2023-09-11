@@ -27,6 +27,10 @@ html {
     width: 100%;
 }
 
+.cityWeather{
+    margin-top: 121px;
+}
+
 
 
 .userLogin {
@@ -97,7 +101,6 @@ html {
     margin: auto;
     overflow: hidden;
     gap: 24px;
-
 }
 
 .formEntry {
@@ -112,6 +115,7 @@ html {
     padding: 3px;
     border: none;
     border-radius: 6px;
+    width: 268px;
 }
 
 .text {

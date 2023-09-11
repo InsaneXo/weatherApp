@@ -7,30 +7,28 @@ let allNav = document.querySelectorAll('.nav-bar2 a');
 let allSec = document.querySelector('.all-sec')
 
 
-let x = document.getElementById("signUp");
-let y = document.getElementById("signIn");
-let z = document.getElementById("btn");
-
+let signUpBtn = document.getElementById("signUp");
+let signInBtn = document.getElementById("signIn");
 function signUp() {
-    x.style.right = "274px";
-    y.style.right = "258px";
-    
+    signUpBtn.style.right = "290px";
+    signInBtn.style.right = "270px";
+
 }
 
 function signIn() {
-    x.style.right = "-2px";
-    y.style.right = "-3px";
+    signUpBtn.style.right = "-2px";
+    signInBtn.style.right = "-3px";
 }
 
 const login = () => {
     let userLogin = document.querySelector('.userLogin')
     let closeLogin = document.querySelector('#closeLogin')
-    
+
     setTimeout(() => {
         userLogin.classList.toggle('none')
     }, 7000)
-    
-    closeLogin.addEventListener('click',()=>{
+
+    closeLogin.addEventListener('click', () => {
         userLogin.classList.toggle('none')
     })
 
@@ -109,6 +107,9 @@ const showTime = () => {
 
 
 }
+
+showTime();
+
 setInterval(() => {
     showTime();
 }, 1000);
@@ -142,6 +143,7 @@ const weather = async (cityName) => {
     else {
 
         let data = await response.json();
+        console.log(data)
 
 
         if (data.weather[0].main == 'Rain') {
@@ -233,6 +235,8 @@ const weather = async (cityName) => {
             hour: 'numeric',
             minute: 'numeric'
         })
+
+        
 
 
 
