@@ -100,6 +100,10 @@
         margin-top: 85px;
     }
 
+    .darkMode{
+        display: none;
+    }
+
     .max-min {
         display: flex;
         align-items: baseline;
@@ -340,6 +344,14 @@
         width: 100%;
         left: 0;
     }
+
+    .loginClose h2 {
+        font-size: 13px;
+      }
+
+    .loginBox {
+        width: 82vw;
+      }
 
     .popOutImg i {
         color: black;

@@ -33,10 +33,46 @@ const login = () => {
     })
 
 }
-
-
-
 login();
+
+let body = document.querySelector('body')
+let flag = 1
+let Switch = document.querySelectorAll('#Switch').forEach((e)=>{
+    e.addEventListener('click', () => {
+        body.classList.toggle('dark')
+        document.querySelectorAll('#moon').forEach((e) => {
+            e.classList.toggle('fa-moon')
+        })
+        if (flag === 1) {
+            document.querySelector('.box1').style.backgroundColor = '#393053'
+            document.querySelector('.box2').style.backgroundColor = '#393053'
+            document.querySelector('.box3').style.backgroundColor = '#393053'
+            document.querySelector('.box4').style.backgroundColor = '#393053'
+            document.querySelector('.box5').style.backgroundColor = '#393053'
+            document.querySelector('.box7').style.backgroundColor = '#393053'
+            document.querySelector('.news-card').style.backgroundColor = '#393053'
+            document.querySelector('.about-page').style.backgroundColor = '#393053'
+            flag = 0
+        }
+        else if (flag === 0) {
+            document.querySelector('.box1').style.backgroundColor = ''
+            document.querySelector('.box2').style.backgroundColor = ''
+            document.querySelector('.box3').style.backgroundColor = ''
+            document.querySelector('.box4').style.backgroundColor = ''
+            document.querySelector('.box5').style.backgroundColor = ''
+            document.querySelector('.box7').style.backgroundColor = ''
+            document.querySelector('.news-card').style.backgroundColor = ''
+            document.querySelector('.about-page').style.backgroundColor = ''
+            flag = 1
+        }
+    
+    
+    })
+})
+
+
+
+
 
 
 allNav.forEach((Navs) => {
@@ -143,7 +179,6 @@ const weather = async (cityName) => {
     else {
 
         let data = await response.json();
-        console.log(data)
 
 
         if (data.weather[0].main == 'Rain') {
@@ -236,7 +271,7 @@ const weather = async (cityName) => {
             minute: 'numeric'
         })
 
-        
+
 
 
 
@@ -571,14 +606,14 @@ const weatherForcast = async (cityName) => {
 
 // news API
 
-const newsAPI = async (cityName) => {
+const newsAPI = async (latest) => {
     let apiURL = 'https://newsapi.org/v2/everything?q='
     let apiKey = '871fce6a64384c40aaba5fbf44d5d85a'
 
 
 
 
-    const response = await fetch(`${apiURL}${cityName} weather&apiKey=${apiKey}`);
+    const response = await fetch(`${apiURL}${latest} News&apiKey=${apiKey}`);
     if (response.status === 426) {
         // Handle the upgrade requirement here
         console.log('Upgrade Required. Switch to newer protocol.');
@@ -633,6 +668,12 @@ const filldata = (cardclone, article) => {
 
 
 
+
+
+
+
+
+
 // newsAPI('Noida');
 // weather('Noida');
 // weatherForcast('Noida');
@@ -644,5 +685,11 @@ SearchBtn.addEventListener('click', () => {
     Search_box.value = ""
 })
 
-
-
+Search_box.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        newsAPI(Search_box.value);
+        weather(Search_box.value);
+        weatherForcast(Search_box.value);
+        Search_box.value = ""
+    }
+})

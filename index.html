@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="weather-app-img/images/cloudy.png" type="image/x-icon">
 
-    <title>CloudsBolt Weather Apps</title>
+    <title>CloudsBolt Weather App</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="loginClose">
                     <h2>Please Login In To Continue</h2>
-                    <i id="closeLogin" class="fa-solid fa-xmark"  style="cursor: pointer;"></i>
+                    <i id="closeLogin" class="fa-solid fa-xmark" style="cursor: pointer;"></i>
                 </div>
                 <div class="loginSign">
                     <div id="btn">
@@ -89,18 +89,17 @@
                     </a>
                 </div>
                 <div class="profile-sec">
-                    <a href="https://github.com/InsaneXo" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     <i class="fa-solid fa-bars" id="menu-btn"></i>
                 </div>
                 <div class="sidebar">
                     <div class="profile-sidebar">
                         <div class="head">
                             <div class="sml-img">
-                                <img src="img/user.jpg" alt="">
+                                <img src="weather-app-img/images/profile.png" alt="">
                             </div>
                             <div class="title">
-                                <h4>Bipin Singh</h4>
-                                <p>Front-End Developer</p>
+                                <h4 id="sidebarName">Bipin Singh</h4>
                             </div>
                         </div>
                         <div class="close-btn">
@@ -116,18 +115,15 @@
                                 <h3>Forecast</h3>
                             </i>
                         </a>
-                        <!-- <a href="#News-Section"><i class="fa-solid fa-city">
-                                <h3>Cities News</h3>
+                        <a href="#News-Section"><i class="fa-solid fa-city">
+                                <h3>Latest News</h3>
                             </i>
-                        </a> -->
+                        </a>
                         <a href="#About-sec"><i class="fa-solid fa-user">
                                 <h3>About</h3>
                             </i>
                         </a>
-                        <a href="#Settings"><i class="fa-solid fa-gear">
-                                <h3>Settings</h3>
-                            </i>
-                        </a>
+
                     </div>
                 </div>
             </div>
@@ -145,19 +141,23 @@
                         </i>
                         <p>Home</p>
                     </a>
-                    <!-- <a href="#News-Section"><i class="fa-solid fa-city">
+                    <a href="#News-Section"><i class="fa-solid fa-city">
                         </i>
                         <p>News</p>
-                    </a> -->
-                    <a href="#Settings"><i class="fa-solid fa-gear">
-                        </i>
-                        <p>Settings</p>
                     </a>
-
+                    <a id="Switch"><i id="moon" class="fa-solid fa-circle-half-stroke"></i>
+                        <p>Theme</p>
+                    </a>
                 </nav>
             </div>
         </div>
-        <div class="all-sec ">
+
+        <div class="all-sec">
+            <div id="Switch">
+                <div class="darkMode">
+                    <i class="fa-solid fa-circle-half-stroke" id="moon"></i>
+                </div>
+            </div>
             <div class="all-sec1" id="Home-sec">
                 <div class="box1">
                     <div class="time">
@@ -576,7 +576,7 @@
 
             </div>
             <div class="news-heading" id="News-Section">
-                <h1>Cities News</h1>
+                <h1>Latest News</h1>
             </div>
             <div class="news-card">
                 <div class="card-container" id="card-container">
@@ -621,18 +621,15 @@
                         <h2>About Us</h2>
                     </div>
                     <div class="about-para">
-                        <p>Hello My name is Bipin Singh. As a Front-End Developer. I have Knowledge of Front-End
-                            Technology Like HTML, CSS or JavaScript and ,I have also Knowledge Of UI/UX Designing
-                            Software. Like Adobe PhotoShop, Adobe XD.</p>
+                        <p>Hello Welcome to CloudsBolt Weather App. In this app you can see real time weather
+                            information and gives a Latest News This website is created by using Front-End
+                            Technology Like HTML, CSS, JavaScript, Node JS, Express JS, and MangoDB.</p>
                     </div>
                     <div class="footer-social">
-                        <a href="https://instagram.com/ig_official_rajput?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
-                            target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://twitter.com/BipinSingh46708?t=jslr9bwHKbM_T_ETFIM9qw&s=09" target="_blank"><i
-                                class="fa-brands fa-twitter"></i></a>
-                        <a href="https://github.com/InsaneXo" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/bipin-singh-850705286" target="_blank"><i
-                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="footer-box">
@@ -661,11 +658,7 @@
                     </div>
                     <div class="email">
                         <i class="fa-solid fa-message"></i>
-                        <p>vsinghvipin333@gmail.com</p>
-                    </div>
-                    <div class="portfolio">
-                        <i class="fa-solid fa-circle-user"></i>
-                        <a href="https://bipinsinghportfolio.netlify.app/">Portfolio Link</a>
+                        <p>CloudsBolt@gmail.com</p>
                     </div>
                 </div>
             </div>
