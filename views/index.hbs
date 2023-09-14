@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="weather-app-img/images/cloudy.png" type="image/x-icon">
+    <link rel="shortcut icon" href=".images/weather-app-img/images/cloudy.png" type="image/x-icon">
 
     <title>CloudsBolt Weather App</title>
 </head>
@@ -33,11 +33,11 @@
                     </div>
                 </div>
                 <div class="form">
-                    <form action="/signin" method="post" id="signIn" class="text">
+                    <form action="/signin" method="post" id="signIn" class="text" onsubmit="onsbmit()">
                         <div class="formEntry">
                             <label for="userName">Username</label>
-                            <input style="color: black;" type="text" name="userName" id="signInuserID" placeholder="Username"
-                                required>
+                            <input style="color: black;" type="text" name="userName" id="signInuserID"
+                                placeholder="Username" required>
                         </div>
                         <div class="formEntry">
                             <label for="passWord">Password</label>
@@ -46,7 +46,7 @@
                         </div>
                         <input type="checkbox" name="remember" id="remember">Remember Me
                         <div class="forgetSec">
-                            <button type="submit">Sign In</button>
+                            <button id="signData" type="submit">Sign In</button>
                             <h3>OR</h3>
                             <div class="socialSign">
                                 <i class="fa-brands fa-instagram"></i>
@@ -59,29 +59,28 @@
                     <form action="/" method="post" id="signUp" class="text">
                         <div class="formEntry">
                             <label for="userName">Username</label>
-                            <input style="color: black;" type="text" autocomplete="on" name="name" id="signUpuserID" placeholder="Username"
-                                required>
+                            <input style="color: black;" type="text" autocomplete="on" name="name" id="signUpuserID"
+                                placeholder="Username" required>
                         </div>
                         <div class="formEntry">
                             <label for="Email">Email</label>
-                            <input style="color: black;" type="email" autocomplete="on" name="email" id="signUpuserEmail"
-                                placeholder="Password" required>
+                            <input style="color: black;" type="email" autocomplete="on" name="email"
+                                id="signUpuserEmail" placeholder="Password" required>
                         </div>
                         <div class="formEntry">
                             <label for="passWord">password</label>
-                            <input style="color: black;" type="password" autocomplete="on" name="password" id="SignUpuserPassword"
-                                placeholder="Password" required>
+                            <input style="color: black;" type="password" autocomplete="on" name="password"
+                                id="SignUpuserPassword" placeholder="Password" required>
                         </div>
                         <div class="formEntry">
                             <label for="cpassWord">Confirm Password</label>
-                            <input style="color: black;" type="password" autocomplete="on" name="cpassword" id="SignUpuserPassword"
-                                placeholder="Confirm Password" required>
+                            <input style="color: black;" type="password" autocomplete="on" name="cpassword"
+                                id="SignUpuserPassword" placeholder="Confirm Password" required>
                         </div>
                         <div class="forgetSec">
-                            <button type="submit">Sign Up</button>
+                            <button id="signData" type="submit">Sign Up</button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>

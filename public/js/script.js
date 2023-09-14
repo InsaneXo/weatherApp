@@ -667,10 +667,16 @@ const filldata = (cardclone, article) => {
 }
 
 
-
-
-
-
+const onsbmit = ()=>{
+    let signData = document.querySelectorAll('#signData')
+    
+    signData.forEach((e)=>{
+        e.addEventListener('click', (event)=>{
+            event.preventDefault();
+            console.log('Hello')
+        })
+    })
+}
 
 
 
