@@ -1,0 +1,425 @@
+/* Large Devices */
+
+@media screen and (max-width: 1490px) {
+    .allbox {
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    .box3 {
+        width: 100%;
+    }
+
+    .box4 {
+        width: 100%;
+    }
+
+    .box5 {
+        width: 100%;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+
+    .cards {
+        width: 649px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .allbox {
+        flex-direction: column;
+        gap: 11px;
+    }
+
+    .box3 {
+        width: 100%;
+    }
+
+    .box4 {
+        width: 100%;
+    }
+
+    .box5 {
+        width: 100%;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+
+    .cards {
+        width: 649px;
+    }
+}
+
+/* Laptop Devices */
+
+@media screen and (max-width: 992px) {
+
+    .time {
+        font-size: 49px;
+    }
+
+    .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date-sec {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 966px) {
+    .footer-sec {
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+    }
+
+    .footer-box {
+        width: 100%;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+}
+
+/* Tablets Devices */
+
+@media screen and (max-width: 768px) {
+
+    .all-sec1 {
+        flex-direction: column;
+        margin-top: 85px;
+    }
+
+    .max-min {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .max-min i {
+        font-size: 45px;
+    }
+
+    .max-min-title {
+        text-align: left;
+    }
+
+    .air-info-title i {
+        font-size: 23px;
+    }
+
+    .max-min-title h2 {
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .air-info-title h2 {
+        font-size: 16px;
+        letter-spacing: 3px;
+        font-weight: 400;
+    }
+
+    .air-info-per h2 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .sun-time h2 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .date-sec-for h2 {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    .for-temp img {
+        width: 35px;
+    }
+
+    .for-temp h1 {
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 6px;
+    }
+
+    .for-temp h2 {
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    .box1 {
+        width: 100%;
+        display: none;
+    }
+
+    .box2 {
+        width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sec-title {
+        justify-content: center;
+        font-size: 13px;
+    }
+
+    .profile-sec {
+        display: none;
+    }
+
+    .search-bar {
+        width: 86vw;
+    }
+
+    .search-bar input {
+        width: 71vw;
+        font-size: 14px;
+    }
+
+    .down-navigation {
+        background-color: #0e153a;
+        width: 100%;
+        height: 63px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: block;
+    }
+
+
+    .down-navigation nav a {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+
+
+    .down-navigation nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .down-navigation nav i {
+        background-color: #3d5af1;
+        height: 35px;
+        width: 35px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .down-navigation nav i:hover {
+        border: 5px solid #e2f3f5;
+        scale: 1.2;
+    }
+
+    .down-navigation nav i:active {
+        border: 3px solid #e2f3f5;
+    }
+
+    .down-navigation nav a i h3 {
+        font-weight: 300
+    }
+
+
+    .sec-title-for {
+        flex-direction: column;
+    }
+
+    .sec-title-for h1 {
+        font-size: 27px;
+    }
+
+    .for-btn {
+        height: 30px;
+        width: 30px;
+    }
+
+    .news-heading {
+        justify-content: center;
+    }
+
+    .news-heading h1 {
+        font-size: 26px;
+    }
+
+    .sec1 {
+        justify-content: center;
+    }
+
+    .copy-desc {
+
+        margin-bottom: 56px;
+    }
+
+
+    .air-info-title-for i {
+        font-size: 29px;
+    }
+
+    .air-info-title-for h2 {
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .air-info-per-for h2 {
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+    .max-min-for i {
+        font-size: 29px;
+    }
+
+    .max-min-title-for h2 {
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+    .for-wind-info {
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .forcast-temp-high-low {
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .about-desc img {
+        width: 196px;
+    }
+
+    .about-desc p {
+        font-size: 16px;
+    }
+
+    .about-heading {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-heading h1 {
+        font-weight: 400;
+        font-size: 25px;
+    }
+}
+
+/* Mobile Device */
+
+@media screen and (max-width: 600px) {
+    .all-sec {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .popOutImg i {
+        color: black;
+        font-size: 44px;
+    }
+
+    .popOutImg h1 {
+        color: black;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    .popOutImg h3 {
+        color: black;
+        font-weight: 400;
+        font-size: 13px;
+      }
+
+    .forescast-sec1 {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .forcast-status {
+        padding: 0;
+        flex-direction: column-reverse;
+    }
+
+    .air-info-title-for i {
+        font-size: 29px;
+    }
+
+    .air-info-title-for h2 {
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .air-info-per-for h2 {
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+    .max-min-for i {
+        font-size: 29px;
+    }
+
+    .max-min-title-for h2 {
+        font-weight: 300;
+        font-size: 17px;
+    }
+
+    .for-wind-info {
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .forcast-temp-high-low {
+        justify-content: center;
+        gap: 22px;
+    }
+
+    .all-sec1 {
+        padding: 0px 0px;
+    }
+
+    .all-sec2 {
+        padding: 0 0px;
+    }
+
+    .sec-title {
+        text-align: center;
+    }
+
+    /* #main {
+        overflow: hidden;
+    } */
+
+    .bottom-footer {
+        font-size: 12px;
+    }
+
+}

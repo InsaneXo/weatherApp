@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="weather-app-img/images/cloudy.png" type="image/x-icon">
+
+    <title>CloudsBolt Weather Apps</title>
+</head>
+
+<body>
+    <div id="main">
+        <div class="userLogin none">
+            <div class="loginBox">
+                <div class="loginHead">
+                    <i class="fa-solid fa-cloud-bolt"></i>
+                    <h2>CloudsBolts</h2>
+                </div>
+                <div class="loginClose">
+                    <h2>Please Login In To Continue</h2>
+                    <i id="closeLogin" class="fa-solid fa-xmark"  style="cursor: pointer;"></i>
+                </div>
+                <div class="loginSign">
+                    <div id="btn">
+                        <button onclick="signIn()">Sign In</button>
+                        <button onclick="signUp()">Sign Up</button>
+                    </div>
+                </div>
+                <div class="form">
+                    <form action="/signin" method="post" id="signIn" class="text">
+                        <div class="formEntry">
+                            <label for="userName">Username</label>
+                            <input style="color: black;" type="text" name="userID" id="userID" placeholder="Username"
+                                required>
+                        </div>
+                        <div class="formEntry">
+                            <label for="passWord">Password</label>
+                            <input style="color: black;" type="password" name="userPass" id="userPass"
+                                placeholder="Password" required>
+                        </div>
+                        <input type="checkbox" name="remember" id="remember">Remember Me
+                        <div class="forgetSec">
+                            <button type="submit">Sign In</button>
+                            <h3>OR</h3>
+                            <div class="socialSign">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-google"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="/signup" method="post" id="signUp" class="text">
+                        <div class="formEntry">
+                            <label for="userName">Username</label>
+                            <input style="color: black;" type="text" name="userID" id="userID" placeholder="Username"
+                                required>
+                        </div>
+                        <div class="formEntry">
+                            <label for="Email">Email</label>
+                            <input style="color: black;" type="email" name="userPass" id="userEmail"
+                                placeholder="Password" required>
+                        </div>
+                        <div class="formEntry">
+                            <label for="passWord">password</label>
+                            <input style="color: black;" type="password" name="userPass" id="userEmail"
+                                placeholder="Password" required>
+                        </div>
+                        <div class="forgetSec">
+                            <button type="submit">Sign Up</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="sec1">
+                <div class="logo">
+                    <i class="fa-solid fa-cloud-bolt"></i>
+                    <a href="#">
+                        <h2>CloudsBolts</h2>
+                    </a>
+                </div>
+                <div class="profile-sec">
+                    <a href="https://github.com/InsaneXo" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <i class="fa-solid fa-bars" id="menu-btn"></i>
+                </div>
+                <div class="sidebar">
+                    <div class="profile-sidebar">
+                        <div class="head">
+                            <div class="sml-img">
+                                <img src="img/user.jpg" alt="">
+                            </div>
+                            <div class="title">
+                                <h4>Bipin Singh</h4>
+                                <p>Front-End Developer</p>
+                            </div>
+                        </div>
+                        <div class="close-btn">
+                            <i class="fa-solid fa-xmark" id="close-btn"></i>
+                        </div>
+                    </div>
+                    <div class="nav-bar2">
+                        <a href="#Home-sec"><i class="fa-solid fa-house">
+                                <h3>Home</h3>
+                            </i>
+                        </a>
+                        <a href="#Forecast-section"> <i class="fa-solid fa-cloud">
+                                <h3>Forecast</h3>
+                            </i>
+                        </a>
+                        <!-- <a href="#News-Section"><i class="fa-solid fa-city">
+                                <h3>Cities News</h3>
+                            </i>
+                        </a> -->
+                        <a href="#About-sec"><i class="fa-solid fa-user">
+                                <h3>About</h3>
+                            </i>
+                        </a>
+                        <a href="#Settings"><i class="fa-solid fa-gear">
+                                <h3>Settings</h3>
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="down-navigation">
+                <nav>
+                    <a href="#About-sec"><i class="fa-solid fa-user">
+                        </i>
+                        <p>About</p>
+                    </a>
+                    <a href="#Forecast-section"> <i class="fa-solid fa-cloud">
+                        </i>
+                        <p>Forecast</p>
+                    </a>
+                    <a href="#Home-sec"><i class="fa-solid fa-house">
+                        </i>
+                        <p>Home</p>
+                    </a>
+                    <!-- <a href="#News-Section"><i class="fa-solid fa-city">
+                        </i>
+                        <p>News</p>
+                    </a> -->
+                    <a href="#Settings"><i class="fa-solid fa-gear">
+                        </i>
+                        <p>Settings</p>
+                    </a>
+
+                </nav>
+            </div>
+        </div>
+        <div class="all-sec ">
+            <div class="all-sec1" id="Home-sec">
+                <div class="box1">
+                    <div class="time">
+                        <div id="hrs"></div>
+                        <div id="min"></div>
+                        <div id="am-pm"></div>
+                    </div>
+                    <div class="date-sec">
+                        <div id="day"></div>
+                        <div id="date"></div>
+                        <div id="month"></div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="search-bar">
+                        <div class="search">
+                            <input type="search" name="" id="Search-box" placeholder="Search Cities/State Name">
+                            <i id="SearchBtn" class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div id="weather-status-img">
+                        <img id="weatherstatusimg" src="" alt="">
+                        <div class="weather-info">
+                            <h2 id="Weather-info"></h2>
+                        </div>
+                        <div class="temp-status">
+                            <div id="temp">
+                                <h2 id="Temp-Details"></h2>
+                            </div>
+                            <div id="city">
+                                <h2 id="Weather-City"></h2>
+                                <p id="Weather-des"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="all-sec2">
+                <div class="sec-title">
+                    <h1>Additional Information</h1>
+                </div>
+                <div class="allbox">
+                    <div class="box3">
+                        <div class="max-min">
+                            <i class="fa-solid fa-temperature-high"></i>
+                            <div class="max-min-title">
+                                <h2>Max Temp</h2>
+                                <h2 id="max-temp"></h2>
+                            </div>
+                        </div>
+                        <div class="max-min">
+                            <i class="fa-solid fa-temperature-low"></i>
+                            <div class="max-min-title">
+                                <h2>Min Temp</h2>
+                                <h2 id="min-temp"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box4">
+                        <div class="air-info">
+                            <div class="air-info-title">
+                                <i class="fa-solid fa-droplet"></i>
+                                <h2>Humidity</h2>
+                            </div>
+                            <div class="air-info-per">
+                                <h2 id="Humidity-Cities"></h2>
+                            </div>
+                        </div>
+                        <div class="air-info">
+                            <div class="air-info-title">
+                                <i class="fa-solid fa-wind"></i>
+                                <h2>Wind</h2>
+                            </div>
+                            <div class="air-info-per">
+                                <h2 id="wind-cities"></h2>
+                            </div>
+                        </div>
+                        <div class="air-info">
+                            <div class="air-info-title">
+                                <i class="fa-solid fa-gauge-simple-high"></i>
+                                <h2>Pressure</h2>
+                            </div>
+                            <div class="air-info-per">
+                                <h2 id="pressure-cities"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box5">
+                        <div class="sun-status">
+                            <img src="weather-app-img/images/sunrise.png" alt="">
+                            <div class="sun-time">
+                                <h2>Sunrise</h2>
+                                <h2 id="sunrise-cities"></h2>
+                            </div>
+                        </div>
+                        <div class="sun-status">
+                            <img src="weather-app-img/images/sunset.png" alt="">
+                            <div class="sun-time">
+                                <h2>Sunset</h2>
+                                <h2 id="sunset-cities"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="all-sec4" id="Forecast-section">
+                <div class="sec-title-for">
+                    <h1>05-Days Forecast</h1>
+                    <div class="day-for-btn">
+                        <h2>See More</h2>
+                        <div class="for-btn">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box7">
+                    <div class="all-forcast">
+                        <div class="forecast-day">
+                            <div class="forescast-sec1">
+                                <div class="date-sec-for">
+                                    <h2 id="forcast-date1"></h2>
+                                </div>
+                                <div class="for-temp">
+                                    <img id="forcastImg" src="" alt="">
+                                    <h1 id="forecast-status1"></h1>
+                                    <h2 id="forecast-temp1"></h2>
+                                </div>
+                            </div>
+                            <div class="forcast-status">
+                                <div class="forcast-temp-high-low">
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-high"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Max Temp</h2>
+                                            <h2 id="forecast-max-temp1"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-low"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Min Temp</h2>
+                                            <h2 id="forecast-min-temp1"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="for-wind-info">
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-droplet"></i>
+                                            <h2>Humidity</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-humidity1"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-wind"></i>
+                                            <h2>Wind</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-wind1"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-gauge-simple-high"></i>
+                                            <h2>Pressure</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-pressure1"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-day">
+                            <div class="forescast-sec1">
+                                <div class="date-sec-for">
+                                    <h2 id="forcast-date2"></h2>
+                                </div>
+                                <div class="for-temp">
+                                    <img id="forcastImg2" src="" alt="">
+                                    <h1 id="forecast-status2"></h1>
+                                    <h2 id="forecast-temp2"></h2>
+                                </div>
+                            </div>
+                            <div class="forcast-status">
+                                <div class="forcast-temp-high-low">
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-high"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Max Temp</h2>
+                                            <h2 id="forecast-max-temp2"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-low"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Min Temp</h2>
+                                            <h2 id="forecast-min-temp2"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="for-wind-info">
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-droplet"></i>
+                                            <h2>Humidity</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-humidity2"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-wind"></i>
+                                            <h2>Wind</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-wind2"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-gauge-simple-high"></i>
+                                            <h2>Pressure</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-pressure2"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-day">
+                            <div class="forescast-sec1">
+                                <div class="date-sec-for">
+                                    <h2 id="forcast-date3"></h2>
+                                </div>
+                                <div class="for-temp">
+                                    <img id="forcastImg3" src="" alt="">
+                                    <h1 id="forecast-status3"></h1>
+                                    <h2 id="forecast-temp3"></h2>
+                                </div>
+                            </div>
+                            <div class="forcast-status">
+                                <div class="forcast-temp-high-low">
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-high"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Max Temp</h2>
+                                            <h2 id="forecast-max-temp3"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-low"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Min Temp</h2>
+                                            <h2 id="forecast-min-temp3"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="for-wind-info">
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-droplet"></i>
+                                            <h2>Humidity</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-humidity3"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-wind"></i>
+                                            <h2>Wind</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-wind3"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-gauge-simple-high"></i>
+                                            <h2>Pressure</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-pressure3"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-day">
+                            <div class="forescast-sec1">
+                                <div class="date-sec-for">
+                                    <h2 id="forcast-date4"></h2>
+                                </div>
+                                <div class="for-temp">
+                                    <img id="forcastImg4" src="" alt="">
+                                    <h1 id="forecast-status4"></h1>
+                                    <h2 id="forecast-temp4"></h2>
+                                </div>
+                            </div>
+                            <div class="forcast-status">
+                                <div class="forcast-temp-high-low">
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-high"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Max Temp</h2>
+                                            <h2 id="forecast-max-temp4"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-low"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Min Temp</h2>
+                                            <h2 id="forecast-min-temp4"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="for-wind-info">
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-droplet"></i>
+                                            <h2>Humidity</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-humidity4"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-wind"></i>
+                                            <h2>Wind</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-wind4"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-gauge-simple-high"></i>
+                                            <h2>Pressure</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-pressure4"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-day">
+                            <div class="forescast-sec1">
+                                <div class="date-sec-for">
+                                    <h2 id="forcast-date5"></h2>
+                                </div>
+                                <div class="for-temp">
+                                    <img id="forcastImg5" src="" alt="">
+                                    <h1 id="forecast-status5"></h1>
+                                    <h2 id="forecast-temp5"></h2>
+                                </div>
+                            </div>
+                            <div class="forcast-status">
+                                <div class="forcast-temp-high-low">
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-high"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Max Temp</h2>
+                                            <h2 id="forecast-max-temp5"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="max-min-for">
+                                        <i class="fa-solid fa-temperature-low"></i>
+                                        <div class="max-min-title-for">
+                                            <h2>Min Temp</h2>
+                                            <h2 id="forecast-min-temp5"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="for-wind-info">
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-droplet"></i>
+                                            <h2>Humidity</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-humidity5"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-wind"></i>
+                                            <h2>Wind</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-wind5"></h2>
+                                        </div>
+                                    </div>
+                                    <div class="air-info-for">
+                                        <div class="air-info-title-for">
+                                            <i class="fa-solid fa-gauge-simple-high"></i>
+                                            <h2>Pressure</h2>
+                                        </div>
+                                        <div class="air-info-per-for">
+                                            <h2 id="forecast-pressure5"></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="news-heading" id="News-Section">
+                <h1>Cities News</h1>
+            </div>
+            <div class="news-card">
+                <div class="card-container" id="card-container">
+
+                </div>
+            </div>
+            <div class="about-heading" id="About-sec">
+                <h1>About Weather App</h1>
+            </div>
+            <div class="about-page">
+                <div class="about-desc">
+                    <img src="weather-app-img/images/about-img.png" alt="">
+                    <div class="para1">
+                        <p>A Weather Application Provides you real-time weather information, <br> including temperture,
+                            forecasting or Weather News.</p>
+                    </div>
+                </div>
+                <div class="about-desc">
+                    <img src="weather-app-img/images/open-weather-img.png" alt="">
+                    <div class="para1">
+                        <p>
+                            Open Weather API is used to fetch data. The OpenWeather API is a popular and widely used web
+                            service that provides access to weather data and forecasts for locations around the world.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-desc">
+                    <img src="weather-app-img/images/newsapi.png" alt="">
+                    <div class="para1">
+                        <p>
+                            A news API allows developers to access and retrieve news articles and related content from
+                            various sources and publishers. It provides a structured way to programmatically gather news
+                            information, enabling developers to integrate up-to-date news articles into their
+                            applications, websites, or services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-sec">
+                <div class="footer-box">
+                    <div class="footer-head">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="about-para">
+                        <p>Hello My name is Bipin Singh. As a Front-End Developer. I have Knowledge of Front-End
+                            Technology Like HTML, CSS or JavaScript and ,I have also Knowledge Of UI/UX Designing
+                            Software. Like Adobe PhotoShop, Adobe XD.</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/ig_official_rajput?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"
+                            target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/BipinSingh46708?t=jslr9bwHKbM_T_ETFIM9qw&s=09" target="_blank"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="https://github.com/InsaneXo" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/bipin-singh-850705286" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <div class="footer-head">
+                        <h2>Quick Links</h2>
+                    </div>
+                    <div class="cat">
+                        <ul>
+                            <li>About</li>
+                            <li>FAQ</li>
+                            <li>Privacy Policy</li>
+                            <li>Help</li>
+                            <li>Terms & Conditions</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-box">
+                    <div class="footer-head">
+                        <h2>Contact Info</h2>
+                    </div>
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Sector 49, Hanuman Vihar, Noida <br> Gautam Budh Nagar, Uttar Pradesh <br> Pincode : 201304
+                        </p>
+                    </div>
+                    <div class="email">
+                        <i class="fa-solid fa-message"></i>
+                        <p>vsinghvipin333@gmail.com</p>
+                    </div>
+                    <div class="portfolio">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <a href="https://bipinsinghportfolio.netlify.app/">Portfolio Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-desc">
+                <h2 class="bottom-footer">Copyright &copy; 2023 CloudsBolt. All right reserve</h2>
+            </div>
+        </div>
+        <div class="popOut none">
+            <div class="popOutImg">
+                <i class="fa-solid fa-city"></i>
+                <h1>Invalid Cities Name</h1>
+                <h3>Please Enter valid Cities Name</h3>
+                <div class="popUpCloseBtn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <template id="template-news-card">
+        <div class="cards">
+            <div class="news-img">
+                <img id="news-img" src="https://via.placeholder.com/400X200" alt="News images">
+            </div>
+            <div class="news-description">
+                <h1 id="news-title"></h1>
+                <h2 id="news-time"></h2>
+                <p id="news-des"></p>
+            </div>
+            <div class="visit-btn">
+                <button id="visit-btn">Read More</button>
+            </div>
+        </div>
+
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
