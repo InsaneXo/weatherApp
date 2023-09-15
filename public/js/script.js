@@ -680,9 +680,9 @@ const onsbmit = ()=>{
 
 
 
-// newsAPI('Noida');
-// weather('Noida');
-// weatherForcast('Noida');
+newsAPI('Noida');
+weather('Noida');
+weatherForcast('Noida');
 
 SearchBtn.addEventListener('click', () => {
     newsAPI(Search_box.value);

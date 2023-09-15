@@ -95,6 +95,10 @@
 
 @media screen and (max-width: 768px) {
 
+    .darkMode {
+        display: none;
+    }
+
     .all-sec1 {
         flex-direction: column;
         margin-top: 85px;
@@ -341,6 +345,15 @@
         left: 0;
     }
 
+    .loginClose h2 {
+        font-size: 14px;
+    }
+
+    .loginBox {
+        height: 559px;
+        width: 94vw;
+    }
+
     .popOutImg i {
         color: black;
         font-size: 44px;
@@ -356,7 +369,7 @@
         color: black;
         font-weight: 400;
         font-size: 13px;
-      }
+    }
 
     .forescast-sec1 {
         flex-direction: column;
